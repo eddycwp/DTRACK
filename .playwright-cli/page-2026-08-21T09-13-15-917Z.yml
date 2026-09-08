@@ -1,0 +1,31 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 白名单管理
+    - main [ref=e38]:
+      - generic [ref=e277]:
+        - button "导入白名单" [ref=e280] [cursor=pointer]
+        - generic [ref=e286]:
+          - table [ref=e288]:
+            - rowgroup [ref=e295]:
+              - row [ref=e296]:
+                - columnheader [ref=e297]
+                - columnheader "白名单（groupId:artifactId）" [ref=e298]
+                - columnheader "groupId" [ref=e300]
+                - columnheader "artifactId" [ref=e302]
+                - columnheader "版本数" [ref=e304]
+          - table [ref=e310]:
+            - rowgroup [ref=e317]:
+              - row [ref=e318]:
+                - cell [ref=e319]:
+                  - button "Expand this row" [ref=e321] [cursor=pointer]
+                - cell "com.example:demo-app" [ref=e325]
+                - cell "com.example" [ref=e327]
+                - cell "demo-app" [ref=e329]
+                - cell "1" [ref=e331]

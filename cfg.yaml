@@ -1,0 +1,40 @@
+- generic [ref=f1e3]:
+  - complementary [ref=f1e4]:
+    - generic [ref=f1e5]: DTrack
+    - menubar [ref=f1e6]:
+      - menuitem "白名单管理" [ref=f1e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=f1e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=f1e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=f1e26] [cursor=pointer]
+  - generic [ref=f1e31]:
+    - generic [ref=f1e32]: 仓库配置
+    - main [ref=f1e38]:
+      - generic [ref=f1e39]:
+        - button "保存配置" [ref=f1e42] [cursor=pointer]
+        - alert [ref=f1e44]:
+          - generic [ref=f1e45]: 配置将写回 dtrack.toml，CLI 与 Web 共用同一份文件。GitLab / Nexus / Harbor 用于拉取项目与制品；奇安信开源卫士用于漏洞扫描（vuln 为组件查询，scan 为二进制/镜像扫描模式）。
+        - generic [ref=f1e47]:
+          - tablist [ref=f1e51]:
+            - tab "GitLab" [selected] [ref=f1e53]
+            - tab "Nexus" [ref=f1e54]
+            - tab "Harbor" [ref=f1e55]
+            - tab "Maven" [ref=f1e56]
+            - tab "奇安信（漏洞查询）" [ref=f1e57]
+            - tab "奇安信（二进制扫描）" [ref=f1e58]
+          - tabpanel "GitLab" [ref=f1e60]:
+            - generic [ref=f1e61]:
+              - generic [ref=f1e62]: GitLab 仓库
+              - generic [ref=f1e64]:
+                - generic [ref=f1e65]:
+                  - generic [ref=f1e66]: Base URL
+                  - textbox "Base URL" [ref=f1e70]:
+                    - /placeholder: https://gitlab.com
+                    - text: https://gitlab.com
+                - generic [ref=f1e71]:
+                  - generic [ref=f1e72]: Token
+                  - textbox "Token" [ref=f1e76]
+                - generic [ref=f1e77]:
+                  - generic [ref=f1e78]: 启用
+                  - generic [ref=f1e80]:
+                    - switch "启用"
+                    - generic [ref=f1e81] [cursor=pointer]

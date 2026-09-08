@@ -1,0 +1,59 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 白名单管理
+    - main [ref=e38]:
+      - generic [ref=e277]:
+        - button "导入白名单" [ref=e280] [cursor=pointer]
+        - generic [ref=e286]:
+          - table [ref=e288]:
+            - rowgroup [ref=e295]:
+              - row [ref=e296]:
+                - columnheader [ref=e297]
+                - columnheader "白名单（groupId:artifactId）" [ref=e298]
+                - columnheader "groupId" [ref=e300]
+                - columnheader "artifactId" [ref=e302]
+                - columnheader "版本数" [ref=e304]
+          - table [ref=e310]:
+            - rowgroup [ref=e317]:
+              - row [ref=e338]:
+                - cell [ref=e339]:
+                  - button "Collapse this row" [expanded] [ref=e340] [cursor=pointer]
+                - cell "com.example:demo-app" [ref=e325]
+                - cell "com.example" [ref=e327]
+                - cell "demo-app" [ref=e329]
+                - cell "1" [ref=e331]
+              - row [ref=e341]:
+                - cell [ref=e342]:
+                  - generic [ref=e344]:
+                    - table [ref=e346]:
+                      - rowgroup [ref=e353]:
+                        - row [ref=e354]:
+                          - columnheader "版本" [ref=e355]
+                          - columnheader "来源" [ref=e357]
+                          - columnheader "扫描状态" [ref=e359]
+                          - columnheader "漏洞统计" [ref=e361]
+                          - columnheader "操作" [ref=e363]
+                    - table [ref=e369]:
+                      - rowgroup [ref=e376]:
+                        - row [ref=e377]:
+                          - cell "1.0.0" [ref=e378]
+                          - cell "POM" [ref=e380]
+                          - cell "扫描中" [ref=e384]
+                          - cell "高危：1 中危：1 低危：2" [ref=e388]:
+                            - generic [ref=e390]:
+                              - generic [ref=e391]: 高危：1
+                              - generic [ref=e392]: 中危：1
+                              - generic [ref=e393]: 低危：2
+                          - cell "详情 重新扫描 导出报告 删除" [ref=e394]:
+                            - generic [ref=e396]:
+                              - generic [ref=e397] [cursor=pointer]: 详情
+                              - generic [ref=e399] [cursor=pointer]: 重新扫描
+                              - generic [ref=e401] [cursor=pointer]: 导出报告
+                              - generic [ref=e403] [cursor=pointer]: 删除

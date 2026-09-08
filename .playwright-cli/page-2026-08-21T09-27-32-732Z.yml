@@ -1,0 +1,62 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [active] [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 白名单管理
+    - main [ref=e38]:
+      - generic [ref=e815]:
+        - button "导入白名单" [ref=e818] [cursor=pointer]
+        - generic [ref=e824]:
+          - table [ref=e826]:
+            - rowgroup [ref=e833]:
+              - row [ref=e834]:
+                - columnheader [ref=e835]
+                - columnheader "白名单（groupId:artifactId）" [ref=e836]
+                - columnheader "groupId" [ref=e838]
+                - columnheader "artifactId" [ref=e840]
+                - columnheader "版本数" [ref=e842]
+          - table [ref=e848]:
+            - rowgroup [ref=e855]:
+              - row [ref=e856]:
+                - cell [ref=e857]:
+                  - button "Collapse this row" [expanded] [ref=e859] [cursor=pointer]
+                - cell "com.example:demo-app" [ref=e863]
+                - cell "com.example" [ref=e865]
+                - cell "demo-app" [ref=e867]
+                - cell "1" [ref=e869]
+              - row [ref=e871]:
+                - cell [ref=e872]:
+                  - generic [ref=e874]:
+                    - table [ref=e876]:
+                      - rowgroup [ref=e883]:
+                        - row [ref=e884]:
+                          - columnheader "版本" [ref=e885]
+                          - columnheader "来源" [ref=e887]
+                          - columnheader "扫描状态" [ref=e889]
+                          - columnheader "漏洞统计" [ref=e891]
+                          - columnheader "操作" [ref=e893]
+                    - table [ref=e899]:
+                      - rowgroup [ref=e906]:
+                        - row [ref=e907]:
+                          - cell "1.0.0" [ref=e908]
+                          - cell "POM" [ref=e910]
+                          - cell "已完成 2026年08月21日 17:18:09" [ref=e914]:
+                            - generic [ref=e915]:
+                              - generic [ref=e916]: 已完成
+                              - generic [ref=e918]: 2026年08月21日 17:18:09
+                          - cell "高危：1 中危：1 低危：2" [ref=e919]:
+                            - generic [ref=e921]:
+                              - generic [ref=e922]: 高危：1
+                              - generic [ref=e923]: 中危：1
+                              - generic [ref=e924]: 低危：2
+                          - cell "详情 重新扫描 导出报告 删除" [ref=e925]:
+                            - generic [ref=e927]:
+                              - generic [ref=e928] [cursor=pointer]: 详情
+                              - generic [ref=e930] [cursor=pointer]: 重新扫描
+                              - generic [ref=e932] [cursor=pointer]: 导出报告
+                              - generic [ref=e934] [cursor=pointer]: 删除

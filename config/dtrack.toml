@@ -1,0 +1,81 @@
+# DTrack configuration
+# All addresses/parameters here are editable; a future web UI will write the same file.
+# Environment overrides use DTRACK__SECTION__KEY (e.g. DTRACK__VULN__QIANXIN__BASE_URL).
+
+[general]
+  cache_dir = "C:\\Users\\Noon\\.dtrack\\cache"
+  cache_ttl = 86400
+  log_level = "INFO"
+  log_file = ""            # 运行日志文件路径（如 ./dtrack.log）；留空则不写文件，仅输出控制台
+  timeout = 30
+  concurrency = 4
+[maven]
+  home = "D:\\mavendown\\apache-maven-3.9.6"
+  executable = ""
+  central_url = "https://repo1.maven.org/maven2"
+  central_username = ""   # 私有仓库（Nexus/Artifactory）认证用户名；注入 -s settings.xml 的 <servers>
+  central_password = ""   # 私有仓库认证密码（与 central_url 配套）
+  resolve_transitive = true
+  max_depth = 5
+  use_mvn_tree = true
+  resolve_license = true
+  local_repo = ""
+[repos]
+  [repos.gitlab]
+    base_url = "https://gitlab.com"
+    token = ""
+    enabled = false
+  [repos.nexus]
+    base_url = ""
+    username = ""
+    password = ""
+    enabled = false
+  [repos.harbor]
+    base_url = ""
+    username = ""
+    password = ""
+    enabled = false
+[vuln]
+  sources = ["nvd", "github", "qianxin", "osv"]
+  [vuln.nvd]
+    api_url = "https://services.nvd.nist.gov/rest/json/cves/2.0"
+    api_key = ""
+    enabled = true
+  [vuln.github]
+    api_url = "https://api.github.com/graphql"
+    token = ""
+    enabled = true
+  [vuln.qianxin]
+    base_url = "https://10.131.122.120:80"          # 必填：奇安信网关地址，如 https://host:8449；配置后该源才启用
+    api_path = "/open-api/v3/component/vulnerability"  # 奇安信 OpenAPI 查询路径；404 时可改为网关实际提供的路径
+    auth_type = "private-token"   # "private-token" 或 "basic"
+    username = ""
+    password = ""
+    token = ""             # private-token 鉴权模式填写
+    verify_ssl = false
+    page_size = 20         # 单次请求返回条数；奇安信网关要求 <= 20（配置更大也会被强制封顶为 20）
+    enabled = true         # base_url 非空即启用；设为 false 可强制关闭（缺省时也由 base_url 决定）
+  [vuln.osv]
+    api_url = "https://api.osv.dev/v1/query"
+    cc_ecosystem = "generic"
+    enabled = true
+[report]
+  out_dir = "./reports"
+  format = "markdown"
+  include_license = true
+# Enable a source by setting enabled=true and filling its credentials.
+
+# ---- 二进制 / 镜像扫描（奇安信开源卫士 OpenAPI V3）----
+# base_url / auth_type / token / username / password / verify_ssl 若留空，
+# 自动复用上方 [vuln.qianxin] 的配置（共用同一网关与鉴权）。
+[scan.qianxin]
+  base_url = ""          # 可选；缺省复用 vuln.qianxin.base_url
+  auth_type = "private-token"
+  username = ""
+  password = ""
+  token = ""
+  verify_ssl = false
+  project_id = ""        # 必填：奇安信项目编号（提交扫描任务所需）
+  poll_interval = 5
+  poll_timeout = 1800
+  page_size = 100

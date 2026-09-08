@@ -1,0 +1,40 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 三方组件库
+    - main [ref=e38]:
+      - generic [ref=e207]:
+        - generic [ref=e208]:
+          - generic [ref=e209]: 共 0 个组件
+          - generic [ref=e211]:
+            - textbox "搜索名称 / group / 坐标" [ref=e214]
+            - generic [ref=e217] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e219]
+                - generic [ref=e220]: 类型
+            - generic [ref=e226] [cursor=pointer]:
+              - generic:
+                - combobox [ref=e228]
+                - generic [ref=e229]: 漏洞等级
+            - button "查询" [ref=e234] [cursor=pointer]
+        - generic [ref=e237] [cursor=pointer]:
+          - table [ref=e239]:
+            - rowgroup [ref=e248]:
+              - row [ref=e249]:
+                - columnheader "坐标" [ref=e250]
+                - columnheader "语言" [ref=e252]
+                - columnheader "License" [ref=e254]
+                - columnheader "类型" [ref=e256]
+                - columnheader "漏洞数" [ref=e258]
+                - columnheader "被引用" [ref=e260]
+                - columnheader "操作" [ref=e262]
+          - generic [ref=e267]:
+            - table:
+              - rowgroup
+            - generic [ref=e268]: No Data

@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dtrack"
+version = "0.1.0"
+description = "模块化开发模块漏洞分析管理系统 (Java/JAR, 后续支持 C/C++ 与 Docker)"
+requires-python = ">=3.10"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+dtrack = "dtrack.cli:main"
+
+[tool.setuptools]
+packages = ["dtrack", "dtrack.core", "dtrack.analyzers", "dtrack.analyzers.java",
+            "dtrack.vuln", "dtrack.sources", "dtrack.report", "dtrack.utils"]
+
+[tool.setuptools.exclude-package-data]
+dtrack = ["__pycache__", "*.pyc"]

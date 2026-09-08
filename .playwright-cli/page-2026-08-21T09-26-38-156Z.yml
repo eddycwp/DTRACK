@@ -1,0 +1,60 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [active] [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 项目管理
+    - main [ref=e38]:
+      - generic [ref=e433]:
+        - button "导入项目" [ref=e436] [cursor=pointer]
+        - generic [ref=e442]:
+          - table [ref=e444]:
+            - rowgroup [ref=e450]:
+              - row [ref=e451]:
+                - columnheader [ref=e452]
+                - columnheader "项目名称" [ref=e453]
+                - columnheader "项目（groupId:artifactId）" [ref=e455]
+                - columnheader "版本数" [ref=e457]
+          - table [ref=e463]:
+            - rowgroup [ref=e469]:
+              - row [ref=e470]:
+                - cell [ref=e471]:
+                  - button "Collapse this row" [expanded] [ref=e473] [cursor=pointer]
+                - cell "演示项目" [ref=e477]
+                - cell "com.example:demo-app" [ref=e479]
+                - cell "1" [ref=e481]
+              - row [ref=e483]:
+                - cell [ref=e484]:
+                  - generic [ref=e486]:
+                    - table [ref=e488]:
+                      - rowgroup [ref=e495]:
+                        - row [ref=e496]:
+                          - columnheader "版本" [ref=e497]
+                          - columnheader "来源" [ref=e499]
+                          - columnheader "扫描状态" [ref=e501]
+                          - columnheader "漏洞统计" [ref=e503]
+                          - columnheader "操作" [ref=e505]
+                    - table [ref=e511]:
+                      - rowgroup [ref=e518]:
+                        - row [ref=e519]:
+                          - cell "1.0.0" [ref=e520]
+                          - cell "POM" [ref=e522]
+                          - cell "已完成 2026年08月21日 17:19:04" [ref=e526]:
+                            - generic [ref=e527]:
+                              - generic [ref=e528]: 已完成
+                              - generic [ref=e530]: 2026年08月21日 17:19:04
+                          - cell "高危：1 中危：1 低危：2" [ref=e531]:
+                            - generic [ref=e533]:
+                              - generic [ref=e534]: 高危：1
+                              - generic [ref=e535]: 中危：1
+                              - generic [ref=e536]: 低危：2
+                          - cell "详情 重新扫描 导出报告 删除" [ref=e537]:
+                            - generic [ref=e539]:
+                              - generic [ref=e540] [cursor=pointer]: 详情
+                              - generic [ref=e542] [cursor=pointer]: 重新扫描
+                              - generic [ref=e544] [cursor=pointer]: 导出报告
+                              - generic [ref=e546] [cursor=pointer]: 删除

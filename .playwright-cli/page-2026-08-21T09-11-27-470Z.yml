@@ -1,0 +1,25 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]: DTrack
+    - menubar [ref=e6]:
+      - menuitem "白名单管理" [ref=e7] [cursor=pointer]
+      - menuitem "项目管理" [ref=e12] [cursor=pointer]
+      - menuitem "三方组件库" [ref=e19] [cursor=pointer]
+      - menuitem "系统配置" [ref=e26] [cursor=pointer]
+  - generic [ref=e31]:
+    - generic [ref=e32]: 项目管理
+    - main [ref=e38]:
+      - generic [ref=e164]:
+        - button "导入项目" [ref=e167] [cursor=pointer]
+        - generic [ref=e173]:
+          - table [ref=e175]:
+            - rowgroup [ref=e181]:
+              - row [ref=e182]:
+                - columnheader [ref=e183]
+                - columnheader "项目名称" [ref=e184]
+                - columnheader "项目（groupId:artifactId）" [ref=e186]
+                - columnheader "版本数" [ref=e188]
+          - generic [ref=e193]:
+            - table:
+              - rowgroup
+            - generic [ref=e194]: No Data
